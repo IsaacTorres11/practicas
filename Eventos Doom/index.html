@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Cajas</title>
+</head>
+
+<style>
+    .contenedor-padre{
+        margin: 20px;
+        background-color: skyblue;
+        padding: 20px;
+        width: 400px;
+    }
+    .cajas{
+        background-color: red;
+        color: white;   
+        margin: 10px auto;
+        font-size: 15px;
+        padding: 20px;
+        text-align: center;
+    }
+    .verde{
+        background-color:green;
+    }
+</style>
+
+<body>
+    <section id="padre" class="contenedor-padre">
+
+    </section>
+    <button id="crear" onclick="crearCaja()">Crear Caja</button>
+    <button id="eliminar" onclick="eliminarCaja()">Eliminar</button>
+
+    <script>
+        var padre;   
+        // Creamos al elelemto
+        function crearCaja(){
+            var caja = document.createElement('div');
+            var contenido =document.createTextNode('caja creada');
+            caja.appendChild(contenido);
+            caja.setAttribute('class','cajas')
+            // funcion auto invocada apenas aparezca el elemento
+            caja.onclick=()=>color();
+            padre = document.getElementById('padre');
+            padre.appendChild(caja);
+        }
+
+        // Borramos al elemento
+        function eliminarCaja(){
+           var lista =document.getElementsByTagName('div');
+           padre.removeChild(lista[0]);
+        }
+
+        let elementos =document.getElementsByClassName('cajas');
+
+        function color(e){
+           // this.classList.toggle('verde');
+            console.log(e);
+        }   
+
+       // elementos[0].addEventListener('click',color);
+        for(let x=0; x < elementos.length ; x++){
+           elementos[x].addEventListener('click',color);
+        }
+       
+
+    </script>
+
+</body>
+</html>

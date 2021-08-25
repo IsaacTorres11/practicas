@@ -1,0 +1,17 @@
+section{
+    margin: 20px 25px;
+}
+
+.caja{
+    background-color: skyblue;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding: 13px;
+    margin: 15px;
+    width: 200px;
+}
+
+.red{
+    background-color: red;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prueba</title>
+</head>
+<style>
+    .caja{
+        background-color: red;
+        color:white;
+        margin: 20px;
+        text-align: center;
+        width: 50px;
+        padding: 20px;
+    }
+    .verde{
+        background-color: green;
+    }
+</style>
+<body>
+    <div class="caja">1</div>
+    <div class="caja">2</div>
+    <div class="caja">3</div>
+    <div class="caja">4</div>
+    <div class="caja">5</div>
+
+    <script>
+        var elementos=document.getElementsByTagName('div');
+
+        function color(){
+            this.classList.toggle('verde');
+        }
+        for(let x=0; x < elementos.length; x++){
+            elementos[x].addEventListener('click',color);
+        }
+    </script>
+
+
+</body>
+</html>

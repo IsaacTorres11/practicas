@@ -1,0 +1,27 @@
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+section{
+    border: 2px dashed blue;
+    width: 80%;
+    margin: 20px auto;
+    height: 80vh;
+    min-height: 80vh;
+
+}
+.caja {
+    background-color: rgba(202, 207, 214, .7);
+    padding: 20px;
+    font-size: 2em;
+    text-align: center;
+}
+.uno{
+    position: relative;
+    top: 100%;
+    transform: translateY(-100%);
+    
+    
+}
